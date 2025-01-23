@@ -1,0 +1,101 @@
+.allCounseling{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: hsla(0,0%,52.9%,.5);
+    z-index: 999;
+    display: none;
+    overflow-y: scroll;
+    .counselingFast{
+        background: white;
+        padding: 1rem;
+        padding-top: .5rem;
+        width: 50%;
+        margin: auto;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .title{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px dashed $border1;
+            padding-bottom: .5rem;
+            margin-bottom: .5rem;
+            .title2{
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $text1;
+            }
+            i{
+                display: grid;
+                align-items: center;
+                cursor: pointer;
+                svg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    fill: $text1;
+                }
+            }
+        }
+        .counselingTitleProduct{
+            font-size: .9rem;
+            font-weight: 300;
+            color: $text1;
+            background: #eee;
+            border-radius: 5px;
+            padding: .5rem;
+            text-align: right;
+        }
+        .counselingFastData{
+            margin: 1rem 0;
+            label{
+                font-size: .9rem;
+                font-weight: 500;
+                color: $text1;
+                margin-bottom: .5rem;
+                display: grid;
+                text-align: right;
+            }
+            input,textarea{
+                background: white;
+                border: 1px solid $border1;
+                padding: 0.4rem .5rem;
+                color: $text1;
+                border-radius: 5px;
+                font-size: .8rem;
+                width: 100%;
+                transition: all .3s ease-in-out;
+                resize: vertical;
+                outline: transparent;
+            }
+        }
+        .captchaQuick{
+            display: grid;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        button,a{
+            background: $green;
+            color: white;
+            font-size: .8rem;
+            font-weight: 300;
+            padding: .3rem 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .allCounseling{
+        .counselingFast {
+            width: 98%;
+        }
+    }
+}

@@ -1,0 +1,273 @@
+.allProfileLists{
+    .showFilter{
+        display: none;
+        width: 100%;
+        background: white;
+        padding: 1rem 0;
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .allProfileList{
+        width: 15rem;
+        background: $backHome;
+        box-shadow: 0 0 20px rgba(0,0,0,.15);
+        padding: .5rem;
+        border-radius: 10px;
+        overflow: hidden;
+        .allUserIndexList{
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            .allUserIndexListsUser{
+                display: grid;
+                grid-template-columns: 1fr;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: .5rem;
+                padding-top: .5rem;
+                .allUserIndexListsUserPic{
+                    display: grid;
+                    justify-content: center;
+                    overflow: hidden;
+                    padding-top: 1rem;
+                    .pic{
+                        position: relative;
+                        img{
+                            width: auto;
+                            height: 3rem;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .allUserIndexListsUserItem{
+                    margin-top: .5rem;
+                    text-align: center;
+                    .allUserIndexListsUserName{
+                        font-size: 1.1rem;
+                        vertical-align: center;
+                        color: $text1;
+                        opacity: .7;
+                        font-weight: 700;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .allUserIndexListsUserScore{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: center;
+                        align-items: center;
+                        grid-gap: .3rem;
+                        padding: 0 1rem;
+                        margin-top: .8rem;
+                        svg{
+                            width: 1.3rem;
+                            height: 1.3rem;
+                        }
+                        span{
+                            font-size: .75rem;
+                            font-weight: 500;
+                            letter-spacing: 1px;
+                            line-height: 1.833;
+                            color: orange;
+                        }
+                    }
+                }
+                h4{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+            }
+            .allUserIndexListItems{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                a{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                    padding: 1rem .5rem;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    &:first-child{
+                        border-left: 1px solid #ddd;
+                    }
+                }
+            }
+        }
+        .walletData{
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            i{
+                display: grid;
+                justify-content: center;
+                svg{
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+            h3{
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: $text2;
+                text-align: center;
+                span{
+                    font-size: 1rem;
+                    letter-spacing: .1px;
+                }
+            }
+            a{
+                display: grid;
+                width: 100%;
+                text-align: center;
+                font-size: .9rem;
+                font-weight: 300;
+                color: $green;
+                margin-top: .5rem;
+            }
+        }
+        .allUserIndexListsItems{
+            margin-top: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            position: sticky;
+            top: 1rem;
+            padding: 1rem .5rem;
+            border: 1px solid #ddd;
+            .allUserIndexListsItem{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .5rem;
+                margin-top: 1.5rem;
+                cursor: pointer;
+                i{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        width: .8rem;
+                        height: .8rem;
+                        fill: $green;
+                    }
+                }
+                a,h3{
+                    transition:all .3s ease-in-out;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    color: $text1;
+                    letter-spacing: .2px;
+                    opacity: .6;
+                }
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+            .userProducts{
+                margin-top: 1.5rem;
+                .slide-fade-enter-active{
+                    transition: all .3s ease-in-out;
+                }
+                .slide-fade-leave-active {
+                    transition: all .3s ease-in-out;
+                }
+                .slide-fade-enter{
+                    transform: translateY(-10px);
+                }
+                .slide-fade-leave-to{
+                    transform: translateY(-10px);
+                }
+                ul{
+                    li{
+                        margin-top: .8rem;
+                        a{
+                            font-size: .8rem;
+                            font-weight: 300;
+                            padding-right: .5rem;
+                            color: $text1;
+                            letter-spacing: .2px;
+                            display: grid;
+                            grid-template-columns: 1.4rem 1fr;
+                            justify-content: right;
+                            align-items: center;
+                            &:before{
+                                content: "";
+                                display: grid;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 5px;
+                                background: $text1;
+                                transition: all .3s ease-in-out;
+                            }
+                            &:hover{
+                                &:before{
+                                    width: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .becomeList{
+            margin-top: 1rem;
+            border-radius: 10px;
+            position: relative;
+            display: grid;
+            overflow: hidden;
+            background: $green;
+            h4{
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                justify-content: right;
+                grid-gap: .5rem;
+                margin: 1rem;
+                font-size: 1rem;
+                font-weight: 500;
+                color: white;
+                z-index: 20;
+                i{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .showFilter{
+            display: block;
+        }
+        .allProfileList{
+            width: 100%;
+            overflow-y: scroll;
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1000;
+            padding: 1rem;
+            .showFilter{
+                margin-top: 0;
+                background: #eee;
+            }
+        }
+    }
+}

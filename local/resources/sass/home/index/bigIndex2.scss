@@ -1,0 +1,100 @@
+.allBigIndex2{
+    .swiperBig2{
+        min-height: 400px;
+        box-shadow: 0 10px 10px rgba(0,0,0,.02);
+        display: grid;
+        button.owl-prev{
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2rem;
+                background: white;
+                width: 3rem;
+                display: grid;
+                border-radius: 5rem;
+                height: 3rem;
+                align-items: center;
+            }
+        }
+        button.owl-next{
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            span{
+                font-size: 2rem;
+                background: white;
+                width: 3rem;
+                display: grid;
+                border-radius: 5rem;
+                height: 3rem;
+                align-items: center;
+            }
+        }
+        .owl-dots{
+            position: absolute;
+        }
+        .adsItem{
+            position: relative;
+            img{
+                width: 100%;
+                min-height: 400px;
+                object-fit: cover;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                animation: fadee2 3s infinite;
+                z-index: 1;
+                @keyframes fadee2 {
+                    0% {
+                        background:none;
+                        right:-200%
+                    }
+                    50% {
+                        right:100%;
+                        background:linear-gradient(70deg,#0000 33%,#ffffff21 50%,#0000 66%)
+                    }
+                    51% {
+                        background:none
+                    }
+                    100% {
+                        right:-200%
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .allBigIndex{
+        margin-top: 0;
+        .slider-bigIndex{
+            min-height: auto;
+            button.owl-prev{
+                span{
+                    font-size: 1.3rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            button.owl-next{
+                span{
+                    font-size: 1.3rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .adsItem{
+                img{
+                    min-height: auto;
+                }
+            }
+        }
+    }
+}

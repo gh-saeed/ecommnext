@@ -1,0 +1,249 @@
+.createDocumentPanel{
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    .createDocumentPanelItems{
+        .allBecomeUserInfo{
+            .allBecomeTip{
+                background: rgba(255,0,0,.1);
+                border: 1px solid red;
+                padding: 0 .5rem;
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .5rem;
+                height: 3rem;
+                i{
+                    svg{
+                        fill: red;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        animation: arrow-anim 1s ease infinite;
+                        margin-bottom: 0;
+                        @keyframes arrow-anim {
+                            0% {
+                                margin-bottom: 0;
+                            }
+                            10% {
+                                margin-bottom: .5rem;
+                            }
+                            30% {
+                                transform: rotate(-40deg);
+                            }
+                            50% {
+                                transform: rotate(40deg);
+                            }
+                            60% {
+                                transform: rotate(-40deg);
+                            }
+                            70% {
+                                transform: rotate(-20deg);
+                            }
+                            80% {
+                                transform: rotate(0);
+                                margin-bottom: 1rem;
+                            }
+                            100% {
+                                margin-bottom: .5rem;
+                            }
+                        }
+                    }
+                }
+                span{
+                    font-size: .85rem;
+                    font-weight: 500;
+                    color: red;
+                    height: 3rem;
+                    display: grid;
+                    align-items: center;
+                }
+                p{
+                    font-size: .85rem;
+                    font-weight: 500;
+                    color: $text1;
+                    height: 3rem;
+                    display: grid;
+                    align-items: center;
+                }
+            }
+            .sellerType{
+                margin-bottom: 1rem;
+                h3{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $text1;
+                }
+                select{
+                    padding: .8rem 1rem;
+                    border: 1.4px solid $border1;
+                    border-radius: 10px;
+                    width: 100%;
+                    background: white;
+                    transition: all .3s ease-in-out;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    margin: 1rem 0;
+                    &:focus{
+                        border: 1.4px solid $green;
+                    }
+                }
+                p{
+                    font-size: .75rem;
+                    font-weight: 300;
+                    color: $text1;
+                }
+            }
+            .personInfoItems{
+                display: grid;
+                grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+                grid-gap: 1rem;
+                margin-top: 1rem;
+                .personInfoItem{
+                    h4{
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: $text1;
+                        margin-bottom: .5rem;
+                    }
+                    input,select{
+                        background: white;
+                        padding: .8rem 1rem;
+                        border: 1.4px solid $border1;
+                        border-radius: 10px;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        &:focus{
+                            border: 1.4px solid $green;
+                        }
+                    }
+                }
+            }
+            #city{
+                display: none;
+            }
+            @media screen and (max-width: 700px) {
+                .personInfoItems{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .personInfoSeller,.contactSeller{
+                margin-top: 3rem;
+            }
+            h3{
+                font-size: 1.3rem;
+                font-weight: 900;
+                color: black;
+            }
+        }
+        .uploadDocument{
+            margin-top: 3rem;
+            h3{
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: $text1;
+            }
+            .download{
+                font-size: .8rem;
+                font-weight: 300;
+                background: $blue;
+                padding: .3rem 1rem;
+                border-radius: 5px;
+                color: white;
+                display: grid;
+                width: 11rem;
+                text-align: center;
+                margin: 1rem 0;
+            }
+        }
+        .sendGallery{
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: .2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            .getImageItem{
+                min-height: 12rem;
+                border-radius: .4rem;
+                border: 2px dashed #DFE3E7;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                grid-template-columns: repeat(auto-fit , minmax(10rem , auto));
+                grid-gap: 1rem;
+                padding: 1rem;
+                span{
+                    color: #494f56;
+                    font-size: .7rem;
+                    font-weight: 300;
+                }
+                .getImagePic{
+                    position: relative;
+                    &:hover{
+                        i{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                    i{
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 5rem;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all .3s ease-in-out;
+                        background: #cbbdbd;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            fill: black;
+                        }
+                    }
+                }
+                img{
+                    height: 10rem;
+                    width: 10rem;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .buttons{
+        display: grid;
+        justify-content: left;
+        grid-template-columns: auto auto;
+        align-items: center;
+        grid-gap: 1rem;
+        margin-top: 1rem;
+        button{
+            font-size: .85rem;
+            font-weight: 300;
+            color: white;
+            background: $green;
+            padding: .3rem 1rem;
+            border-radius: 5px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 8rem;
+            height: 2.2rem;
+            &:last-child{
+                background: red;
+            }
+        }
+    }
+}

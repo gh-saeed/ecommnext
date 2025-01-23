@@ -1,0 +1,63 @@
+.AllPopUpIndex{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    .AllPopUpData {
+        padding: 1rem;
+        width: 35%;
+        margin: auto;
+        border-radius: .3rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: $backHome;
+        .pic{
+            display: grid;
+            justify-content: center;
+            margin-bottom: 1rem;
+            img{
+                width: 100%;
+                height: 5rem;
+                object-fit: contain;
+            }
+        }
+        h3{
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $text1;
+            margin-bottom: .5rem;
+        }
+        p{
+            text-align: center;
+            font-size: .9rem;
+            font-weight: 500;
+            color: $text1;
+            opacity: .7;
+        }
+        .buttons{
+            display: grid;
+            justify-content: center;
+            margin-top: 1rem;
+            a{
+                text-align: center;
+                font-size: .9rem;
+                font-weight: 500;
+                background: $green;
+                color: white;
+                padding: .2rem 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+    @media screen and (max-width: 920px) {
+        .AllPopUpData{
+            width: 90%;
+        }
+    }
+}

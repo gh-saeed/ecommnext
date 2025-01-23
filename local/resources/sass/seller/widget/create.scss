@@ -1,0 +1,344 @@
+.widgetCreate{
+    .options{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1rem;
+        margin-bottom: 1rem;
+        .option{
+            border-radius: 10px;
+            background: limegreen;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+            padding: .5rem;
+            &:nth-child(2){
+                background: orange;
+            }
+            &:nth-child(3){
+                background: red;
+            }
+        }
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        p{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: black;
+        }
+    }
+    .page1{
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 2px solid #d3d3d3;
+        border-radius: 10px;
+        .createWidget{
+            position: relative;
+            .createItems{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            .createItem{
+                label{
+                    color: $text1;
+                    font-weight: 500;
+                    font-size: .9rem;
+                    margin-bottom: .5rem;
+                    display: grid;
+                }
+                input,select{
+                    background: white;
+                    border: 1px solid #DFE3E7;
+                    padding: 0.3rem .5rem;
+                    color: $text1;
+                    border-radius: .3rem;
+                    font-size: .8rem;
+                    width: 100%;
+                    height: 2rem;
+                    transition: all .3s ease-in-out;
+                    &:focus{
+                        box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                        border: 1px solid $blue;
+                    }
+                }
+            }
+            .change1{
+                display: none;
+            }
+            .select2{
+                width: 100% !important;
+            }
+            .deleteAll{
+                position: absolute;
+                left: .5rem;
+                top: .5rem;
+                cursor: pointer;
+                i{
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        fill: red;
+                    }
+                }
+            }
+            .abilityPost{
+                background: #F5F6F8;
+                padding: 1rem;
+                border-radius: .2rem;
+                margin-top: 1rem;
+                .abilityTitle{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    grid-gap: .5rem;
+                    align-items: center;
+                }
+                .abilityTable{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    margin: 1rem 0;
+                    box-shadow: 0 0 0 0;
+                    border-radius: .3rem;
+                    overflow: hidden;
+                    tr{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr auto;
+                        text-align: right;
+                        align-items: center;
+                        grid-gap: 1rem;
+                        background: white;
+                        padding: 0 1rem;
+                        min-height: 3.5rem;
+                        border-bottom: 0;
+                        th{
+                            font-weight: 300;
+                            color: $text1;
+                            font-size: .75rem;
+                            text-align: right;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            padding-right: 1rem;
+                            i{
+                                cursor: pointer;
+                                svg{
+                                    width: 1.2rem;
+                                    height: 1.2rem;
+                                    fill: $text1;
+                                    transition: all .3s ease-in-out;
+                                }
+                                &:hover{
+                                    svg{
+                                        fill: black;
+                                    }
+                                }
+                            }
+                        }
+                        td{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            color: $text1;
+                            font-size: .7rem;
+                            font-weight: 200;
+                            overflow: hidden;
+                            i{
+                                cursor: pointer;
+                                svg{
+                                    width: 1rem;
+                                    height: 1rem;
+                                    fill: $text1;
+                                }
+                            }
+                            input,select{
+                                background: transparent;
+                                border: 1px solid #DFE3E7;
+                                padding: 0.3rem .5rem;
+                                color: $text1;
+                                border-radius: .3rem;
+                                font-size: .8rem;
+                                width: 100%;
+                                transition: all .3s ease-in-out;
+                                resize: vertical;
+                                height: 2rem;
+                                &:focus{
+                                    box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                                    border: 1px solid $blue;
+                                }
+                            }
+                        }
+                        &:nth-child(2){
+                            border-top: 2px solid #DFE3E7;
+                        }
+                    }
+                }
+            }
+            .button{
+                padding: .5rem 1.5rem;
+                background: green;
+                margin-top: 1rem;
+                color: white;
+                font-size: .85rem;
+                font-weight: 300;
+                border-radius: 5px;
+            }
+        }
+    }
+    .submit{
+        padding: .3rem 1rem;
+        border-radius: 5px;
+        background: green;
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-top: 1rem;
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+    }
+    .item{
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+        .create{
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $text1;
+            cursor: pointer;
+            i{
+                display: grid;
+                justify-content: center;
+                margin-bottom: 1rem;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                    fill: $text1;
+                }
+            }
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .allThemes{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: hsla(0,0%,52.9%,.5);
+        z-index: 999;
+        display: none;
+        .details1{
+            background: white;
+            padding: 1rem;
+            width: 50%;
+            margin: auto;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            .des1{
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: red;
+                margin-bottom: 1rem;
+            }
+            .themes{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                .theme1{
+                    .pic{
+                        height: 25rem;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        box-shadow: 0 0 5px rgba(0,0,0,.2);
+                        img{
+                            transition: all 2s ease-in-out;
+                        }
+                        &:hover{
+                            img{
+                                transform: translateY(calc(-100% + 25rem));
+                            }
+                        }
+                    }
+                    .body{
+                        background: green;
+                        padding: .5rem;
+                        text-align: center;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: white;
+                        margin-top: .5rem;
+                        display: grid;
+                        width: 100%;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .allLearn{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: hsla(0,0%,52.9%,.5);
+        z-index: 999;
+        display: none;
+        .details1{
+            background: white;
+            padding: 1rem;
+            width: 50%;
+            margin: auto;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            .des1{
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: red;
+            }
+            .detail{
+                font-size: 1rem;
+                font-weight: 300;
+                color: #666;
+                margin-top: 1rem;
+                span{
+                    color: black;
+                    font-weight: 500;
+                }
+            }
+            .note{
+                color: rgba(255, 0, 0, 0.8);
+                span{
+                    color: red;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

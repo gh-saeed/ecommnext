@@ -1,0 +1,41 @@
+.changeExcel{
+    .importDataExcel{
+        .sendImage{
+            background: white;
+            margin: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+            .dropify-wrapper{
+                border: 1px solid #eee !important;
+                .file-icon{
+                    &:before{
+                        opacity: 0 !important;
+                        position: absolute !important;
+                        top: 0 !important;
+                        visibility: hidden !important;
+                    }
+                }
+                .dropify-message p{
+                    margin: 0;
+                    font-size: 1.3rem;
+                    font-family: irsans;
+                    color: #00800082;
+                }
+            }
+        }
+        #upload-image{
+            padding: .3rem 1.5rem;
+            font-weight: 500;
+            font-size: .9rem;
+            color: white;
+            background: $green;
+            margin-right: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+        }
+    }
+}

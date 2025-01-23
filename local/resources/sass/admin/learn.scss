@@ -1,0 +1,139 @@
+.allLearnDash{
+    background: white;
+    border-radius: 5px;
+    padding: 1rem;
+    .search{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid $border1;
+        overflow: hidden;
+        input{
+            padding: .5rem;
+            background: white;
+        }
+        button{
+            background: $green;
+            color: white;
+            padding: .5rem 1rem;
+        }
+    }
+    .questions{
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 2rem;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            gap: .5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            font-weight: 700;
+            color: black;
+            background: #f5f5f5;
+            padding: .5rem 1rem;
+            cursor: pointer;
+            opacity: .8;
+            i{
+                display: grid;
+                align-items: center;
+                svg{
+                    width: .85rem;
+                    height: .85rem;
+                }
+            }
+        }
+        .description{
+            font-size: .8rem;
+            font-weight: 300;
+            color: $text1;
+            background: #eee;
+            padding: .5rem;
+            ul{
+                li{
+                    margin-top: 1rem;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    a{
+                        color: blue;
+                    }
+                    span{
+                        font-weight: 700;
+                        color: black;
+                    }
+                }
+            }
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    #update_notification{
+        position: fixed;
+        left: .5rem;
+        bottom: .5rem;
+        padding: 1rem;
+        background: white;
+        border: 1px solid #bbb;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 20rem;
+        .toast-header{
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            align-items: center;
+            justify-content: space-between;
+            grid-gap: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid $border1;
+            strong{
+                color: black;
+                font-size: .9rem;
+                font-weight: 700;
+            }
+            span{
+                background: $blue;
+                border-radius: 5rem;
+                padding: .1rem .5rem;
+                color: white;
+            }
+            button{
+                display: grid;
+                align-items: center;
+                background: transparent;
+                i{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+        .toast-body{
+            span{
+                color: $text1;
+                font-size: .8rem;
+                font-weight: 300;
+            }
+            button{
+                margin-top: 1rem;
+                background: $blue;
+                color: white;
+                font-size: .8rem;
+                font-weight: 300;
+                padding: .1rem 1rem;
+                border-radius: 3px;
+            }
+        }
+    }
+}

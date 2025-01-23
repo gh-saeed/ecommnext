@@ -1,0 +1,207 @@
+.allPanel {
+    margin: 6rem 18rem 1rem 1rem;
+    .demo{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        grid-gap: .5rem;
+        background: linear-gradient(to right, white 20%, $green 40%, $green 60%, white 80%);
+        background-size: 200% auto;
+        animation: shine 1s linear infinite;
+        padding: 1rem;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        .right{
+            .title{
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: black;
+                margin-bottom: .5rem;
+            }
+            p{
+                font-size: .8rem;
+                font-weight: 300;
+                color: black;
+                opacity: .7;
+            }
+        }
+        .left{
+            font-size: 1rem;
+            font-weight: 300;
+            color: white;
+            background: black;
+            padding: .5rem 1rem;
+            border-radius: 5rem;
+        }
+    }
+    .widgetItems{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+        grid-gap: 1rem;
+        margin: 1rem 0;
+        .widgetItem{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            grid-gap: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+            .widgetIcon{
+                position: relative;
+                background: rgba(255, 255, 255, 0.4);
+                width: 3.8rem;
+                height: 3.8rem;
+                border-radius: 5rem;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                z-index: 5;
+                svg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    fill: white;
+                }
+            }
+            .widgetSubject{
+                position: relative;
+                z-index: 5;
+                h4{
+                    font-size: 1rem;
+                    color: white;
+                    font-weight: 300;
+                }
+                h5{
+                    font-size: .9rem;
+                    color: #fff;
+                    font-weight: 300;
+                    margin-top: .5rem;
+                    letter-spacing: .1px;
+                }
+            }
+            &:first-child{
+                background: linear-gradient(to left,orange 0%,red 100%);
+            }
+            &:nth-child(2){
+                background: linear-gradient(to left,#31A945 0%,#31A991 100%);
+            }
+            &:nth-child(3){
+                background: linear-gradient(to left,#3C31A9 0%,#31A5A9 100%);
+            }
+        }
+    }
+    .productData{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        .productItem{
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+            background: white;
+            h3{
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $text1;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(0,0,0,.1);
+            }
+            table{
+                border-radius: .3rem;
+                width: 100%;
+                tr{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,minmax(1px , 1fr));
+                    align-items: center;
+                    grid-gap: 1rem;
+                    padding: 1rem;
+                    th{
+                        font-weight: 700;
+                        color: $text1;
+                        font-size: .85rem;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    td{
+                        font-weight: 300;
+                        font-size: .85rem;
+                        text-align: center;
+                        color: $text1;
+                        svg{
+                            fill: $text1;
+                            width: 1rem;
+                            height: 1rem;
+                            cursor: pointer;
+                        }
+                        img{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            object-fit: cover;
+                            border-radius: 5rem;
+                            box-shadow: 0 0 10px rgba(0,0,0,.1);
+                        }
+                        a{
+                            display: grid;
+                            align-items: center;
+                            svg{
+                                margin-left: .5rem;
+                            }
+                        }
+                    }
+                    .buttons{
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-gap: .5rem;
+                        button{
+                            padding: .3rem;
+                            border-radius: 5px;
+                            background: red;
+                            color: white;
+                            font-size: .8rem;
+                        }
+                        a{
+                            font-size: .8rem;
+                            padding: .3rem;
+                            border-radius: 5px;
+                            background: green;
+                            color: white;
+                            &:nth-child(2){
+                                background: orange;
+                            }
+                        }
+                    }
+                    &:nth-child(even){
+                        background: #eee;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:800px) {
+        .widgetItems{
+            display: block;
+            .widgetItem{
+                margin-bottom: 2rem;
+            }
+        }
+        .productData{
+            display: block;
+            .productItem{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

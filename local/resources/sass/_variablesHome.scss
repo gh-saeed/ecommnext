@@ -1,0 +1,27 @@
+:root {
+  --green-color: '#007e46';
+  --red-color: 'red';
+  --header-color: '';
+  --header2-color: '';
+  --back1-color: #fff;
+  --widget-color: '';
+  --single-color: '';
+  --back2-color: #F6F8FB;
+  --back3-color: #F1F4F9;
+  --back4-color: '';
+}
+$text1: #000;
+$text2: #444;
+$border1: #eee;
+$blue: #19bfd3;
+$green: var(--green-color);
+$red: var(--red-color);
+$headerHome: var(--header-color);
+$headerHome2: var(--header2-color);
+$widgetHome: var(--widget-color);
+$singleHome: var(--single-color);
+$backHome: var(--back1-color);
+$backHome2: var(--back2-color);
+$backHome3: var(--back3-color);
+$backHome4: #E0ECF2;
+$allBack: var(--back4-color);

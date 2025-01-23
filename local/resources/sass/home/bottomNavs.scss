@@ -1,0 +1,59 @@
+.allBottomNavs{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 -10px 10px rgba(0,0,0,.1);
+    z-index: 110;
+    display: none;
+    grid-template-columns: repeat(auto-fit,minmax(1px,1fr));
+    .button{
+        display: grid;
+        padding: .5rem .2rem;
+        text-align: center;
+        font-size: .7rem;
+        color: $text2;
+        opacity: .8;
+        border-left: 2px solid $border1;
+        i{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            svg{
+                width: 1.2rem;
+                height: 1.2rem;
+                fill: $text2;
+            }
+        }
+        span{
+            span{
+                font-size: .6rem;
+                background: red;
+                padding: 0 2px;
+                font-weight: 300;
+                color: white;
+                height: 12px;
+                border-radius: 5px;
+            }
+        }
+        &:last-child{
+            border-left: 0;
+        }
+    }
+    .home1{
+        opacity: 1;
+        color: $green;
+        i{
+            svg{
+                fill: $green;
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .allBottomNavs{
+        display: grid;
+    }
+}

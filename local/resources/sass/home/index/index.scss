@@ -1,0 +1,35 @@
+.allIndex{
+    .myWidget{
+        margin-bottom: 4rem;
+    }
+    .emptyWidget{
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: red;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        i{
+            display: grid;
+            justify-content: center;
+            margin-bottom: 1rem;
+            svg{
+                width: 3rem;
+                height: 3rem;
+                fill: red;
+            }
+        }
+        a{
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 300;
+            color: white;
+            background: red;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+        }
+    }
+}

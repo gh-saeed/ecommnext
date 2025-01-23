@@ -1,0 +1,502 @@
+.allCartIndex{
+    margin: auto;
+    margin-top: 1rem;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding: 1rem;
+        .name{
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: black;
+            display: flex;
+            justify-content: right;
+            gap: .5rem;
+            align-items: center;
+            i{
+                display: grid;
+                align-items: center;
+                svg{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+        .next{
+            font-size: .8rem;
+            font-weight: 300;
+            color: $text2;
+            display: flex;
+            justify-content: left;
+            gap: .5rem;
+            background: #eee;
+            border-radius: 5px;
+            padding: 5px 10px;
+            align-items: center;
+            i{
+                display: grid;
+                align-items: center;
+                svg{
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+    }
+    .container1{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 2rem;
+        margin-top: 1rem;
+        .right{
+            .carts{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                .item{
+                    background: white;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0,0,0,.05);
+                    padding: 1rem;
+                    .topItem{
+                        display: grid;
+                        grid-template-columns: 2fr 1fr;
+                        grid-gap: 1rem;
+                        .description{
+                            .title3{
+                                font-size: 1.1rem;
+                                font-weight: 700;
+                                margin-bottom: .5rem;
+                                color: black;
+                                white-space: pre-line;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                box-orient: vertical;
+                                -webkit-box-orient: vertical;
+                                line-clamp: 2;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            .price{
+                                display: flex;
+                                justify-content: right;
+                                align-items: center;
+                                gap: .5rem;
+                                font-size: .8rem;
+                                font-weight: 700;
+                                margin-bottom: .5rem;
+                                color: $text2;
+                                .name{
+                                    font-size: .8rem;
+                                    font-weight: 300;
+                                    color: $text2;
+                                }
+                            }
+                            .options{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                grid-gap: .5rem;
+                                .option{
+                                    background: #f5f5f5;
+                                    text-align: center;
+                                    padding: .2rem .5rem;
+                                    border-radius: 5rem;
+                                    font-size: .8rem;
+                                    font-weight: 700;
+                                    color: black;
+                                    border: 1px solid #ccc;
+                                }
+                            }
+                        }
+                        .pic{
+                            display: grid;
+                            align-items: center;
+                            border-radius: 10px;
+                            padding: .5rem;
+                            box-shadow: 0 0 10px rgba(0,0,0,.1);
+                        }
+                    }
+                    .botItem{
+                        display: grid;
+                        grid-template-columns: 2fr 1fr;
+                        grid-gap: 1rem;
+                        margin-top: 1rem;
+                        .operations{
+                            display: grid;
+                            grid-template-columns: auto 1fr;
+                            grid-gap: .5rem;
+                            align-items: center;
+                            position: relative;
+                            .operation{
+                                border-radius: 50%;
+                                width: 1.7rem;
+                                height: 1.7rem;
+                                display: grid;
+                                align-items: center;
+                                justify-content: center;
+                                background: $green;
+                                cursor: pointer;
+                                i{
+                                    display: grid;
+                                    align-items: center;
+                                }
+                                svg{
+                                    width: .7rem;
+                                    height: .7rem;
+                                    fill: white;
+                                }
+                            }
+                            .seller{
+                                padding: .1rem .5rem;
+                                border-radius: 5rem;
+                                font-size: .9rem;
+                                text-align: center;
+                                color: $green;
+                                border: 1px solid $green;
+                            }
+                            ul{
+                                display: none;
+                                position: absolute;
+                                top: calc(100% + .5rem);
+                                right: 0;
+                                background: white;
+                                border-radius: 5px;
+                                border: 1px solid $border1;
+                                box-shadow: 0 10px 10px rgba(0,0,0,.1);
+                                overflow: hidden;
+                                li{
+                                    padding: 5px 10px;
+                                    font-size: .85rem;
+                                    font-weight: 300;
+                                    color: $text1;
+                                    cursor: pointer;
+                                    &:hover{
+                                        background: $green;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .change{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1rem;
+                            .button1{
+                                border-radius: 50%;
+                                width: 1.7rem;
+                                height: 1.7rem;
+                                display: grid;
+                                align-items: center;
+                                justify-content: center;
+                                background: #eee;
+                                cursor: pointer;
+                                i{
+                                    display: grid;
+                                    align-items: center;
+                                }
+                                svg{
+                                    width: .7rem;
+                                    height: .7rem;
+                                    fill: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .left{
+            width: 25rem;
+            .box{
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,.05);
+                padding: 1rem;
+                padding-top: 0;
+                margin-bottom: 1rem;
+                .item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: .5rem;
+                    padding: 1rem 0;
+                    border-bottom: 1px solid $border1;
+                    .name{
+                        font-weight: 700;
+                        color: $text2;
+                        font-size: .8rem;
+                    }
+                    .body{
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        font-weight: 700;
+                        color: black;
+                        font-size: .9rem;
+                        &:after{
+                            content: "\F06C\00FE0E";
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            font-weight: 400;
+                            letter-spacing: normal;
+                            font-family: digikala;
+                            font-size: 1.1rem;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-decoration: none;
+                            text-transform: none;
+                            line-height: 1;
+                            box-sizing: inherit;
+                        }
+                    }
+                    .body1{
+                        font-weight: 700;
+                        color: black;
+                        font-size: .9rem;
+                    }
+                    &:nth-last-child(2){
+                        border-bottom: 0;
+                    }
+                }
+                .final{
+                    .name{
+                        font-size: 1rem;
+                        color: $green;
+                    }
+                    .body{
+                        font-size: 1.2rem;
+                        color: $green;
+                    }
+                }
+                .move{
+                    background: $green;
+                    padding: .5rem;
+                    text-align: center;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    display: grid;
+                    width: 100%;
+                    border-radius: 5px;
+                }
+            }
+            .allCategoryIndex{
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,.05);
+                padding: 1rem;
+                .title2{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: $text2;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+                .swiper-button-next,.swiper-button-prev{
+                    background: white;
+                }
+            }
+        }
+    }
+    .allCartIndexEmpty{
+        margin-top: 1rem;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        i{
+            svg{
+                fill: $green;
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+        p{
+            color: $text2;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .container1{
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            .right{
+                .carts{
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    .item{
+                        padding: .5rem;
+                        .topItem{
+                            display: flex;
+                            flex-direction: column-reverse;
+                            grid-gap: .5rem;
+                            .description{
+                                .title3{
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                    margin-bottom: .5rem;
+                                    color: black;
+                                    white-space: pre-line;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    box-orient: vertical;
+                                    -webkit-box-orient: vertical;
+                                    line-clamp: 2;
+                                    -webkit-line-clamp: 2;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                                .price{
+                                    display: flex;
+                                    justify-content: right;
+                                    align-items: center;
+                                    gap: .5rem;
+                                    font-size: .8rem;
+                                    font-weight: 700;
+                                    margin-bottom: .5rem;
+                                    color: $text2;
+                                    .name{
+                                        font-size: .8rem;
+                                        font-weight: 300;
+                                        color: $text2;
+                                    }
+                                }
+                                .options{
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    grid-gap: .5rem;
+                                    .option{
+                                        background: #f5f5f5;
+                                        text-align: center;
+                                        padding: .2rem .5rem;
+                                        border-radius: 5rem;
+                                        font-size: .8rem;
+                                        font-weight: 700;
+                                        color: black;
+                                        border: 1px solid #ccc;
+                                    }
+                                }
+                            }
+                            .pic{
+                                justify-content: center;
+                                img{
+                                    height: 10rem;
+                                }
+                            }
+                        }
+                        .botItem{
+                            display: grid;
+                            grid-template-columns: 2fr 1fr;
+                            grid-gap: 1rem;
+                            margin-top: 1rem;
+                            .operations{
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                grid-gap: .5rem;
+                                align-items: center;
+                                position: relative;
+                                .operation{
+                                    border-radius: 50%;
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    display: grid;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: $green;
+                                    cursor: pointer;
+                                    i{
+                                        display: grid;
+                                        align-items: center;
+                                    }
+                                    svg{
+                                        width: .7rem;
+                                        height: .7rem;
+                                        fill: white;
+                                    }
+                                }
+                                .seller{
+                                    padding: .1rem .5rem;
+                                    border-radius: 5rem;
+                                    font-size: .9rem;
+                                    text-align: center;
+                                    color: $green;
+                                    border: 1px solid $green;
+                                }
+                                ul{
+                                    display: none;
+                                    position: absolute;
+                                    top: calc(100% + .5rem);
+                                    right: 0;
+                                    background: white;
+                                    border-radius: 5px;
+                                    border: 1px solid $border1;
+                                    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+                                    overflow: hidden;
+                                    li{
+                                        padding: 5px 10px;
+                                        font-size: .85rem;
+                                        font-weight: 300;
+                                        color: $text1;
+                                        cursor: pointer;
+                                        &:hover{
+                                            background: $green;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                            .change{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 1rem;
+                                .button1{
+                                    border-radius: 50%;
+                                    width: 1.7rem;
+                                    height: 1.7rem;
+                                    display: grid;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: #eee;
+                                    cursor: pointer;
+                                    i{
+                                        display: grid;
+                                        align-items: center;
+                                    }
+                                    svg{
+                                        width: .7rem;
+                                        height: .7rem;
+                                        fill: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .left{
+                width: 100%;
+                .allCategoryIndex{
+                    display: none;
+                }
+            }
+        }
+    }
+}

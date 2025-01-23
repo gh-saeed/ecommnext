@@ -1,0 +1,80 @@
+.allProduct{
+    table{
+        background: $backHome;
+        border-radius: .3rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        margin-top: 1rem;
+        width: 100%;
+        tr{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(1px , 1fr));
+            align-items: center;
+            grid-gap: 1rem;
+            padding: 1rem;
+            th{
+                font-weight: 700;
+                color: $text1;
+                font-size: .85rem;
+                text-align: center;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+            td{
+                font-weight: 300;
+                font-size: .85rem;
+                text-align: center;
+                color: $text1;
+                svg{
+                    fill: $text1;
+                    width: 1rem;
+                    height: 1rem;
+                    cursor: pointer;
+                }
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    object-fit: cover;
+                    border-radius: 5rem;
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                }
+                a{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        margin-left: .5rem;
+                    }
+                }
+            }
+            .buttons{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-gap: .5rem;
+                button{
+                    padding: .3rem;
+                    border-radius: 5px;
+                    background: red;
+                    color: white;
+                    font-size: .8rem;
+                }
+                a{
+                    font-size: .8rem;
+                    padding: .3rem;
+                    border-radius: 5px;
+                    background: green;
+                    color: white;
+                    &:nth-child(2){
+                        background: orange;
+                    }
+                }
+            }
+            &:nth-child(even){
+                background: $backHome2;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.allCreateGroup{
+    .createGroup{
+        .products{
+            .container{
+                background: white;
+                padding: 1rem;
+                border-radius: 10px;
+                margin-bottom: 1rem;
+                .items{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+                    grid-gap: 1rem;
+                }
+                .item{
+                    margin-bottom: 1rem;
+                    label{
+                        color: $text1;
+                        font-weight: 500;
+                        font-size: .9rem;
+                    }
+                    input,textarea,select{
+                        background: white;
+                        border: 1px solid #DFE3E7;
+                        padding: 0.3rem .5rem;
+                        color: $text1;
+                        border-radius: .3rem;
+                        font-size: .8rem;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                        &:focus{
+                            box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                            border: 1px solid $blue;
+                        }
+                    }
+                }
+                .item2{
+                    margin-bottom: 1rem;
+                    label{
+                        color: $text1;
+                        font-weight: 500;
+                        font-size: .9rem;
+                    }
+                    input,select{
+                        background: white;
+                        border: 1px solid #DFE3E7;
+                        padding: 0.3rem .5rem;
+                        color: $text1;
+                        border-radius: .3rem;
+                        font-size: .8rem;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                        &:focus{
+                            box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                            border: 1px solid $blue;
+                        }
+                    }
+                }
+            }
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+        }
+        .add,.createF{
+            background: green;
+            padding: .5rem 1rem;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+}

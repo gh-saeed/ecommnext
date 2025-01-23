@@ -1,0 +1,766 @@
+.allCheckoutIndex{
+    .chargeWidgets{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+        grid-gap: 1rem;
+        .WidgetItem{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            grid-gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            background: white;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px $border1;
+            .WidgetIcon{
+                position: relative;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            .WidgetSubject{
+                position: relative;
+                z-index: 5;
+                h4{
+                    font-size: .9rem;
+                    color: $text1;
+                    font-weight: 500;
+                }
+                h5{
+                    font-size: .85rem;
+                    color: $text1;
+                    opacity: .7;
+                    font-weight: 300;
+                    margin-top: .5rem;
+                    span{
+                        letter-spacing: .2px;
+                    }
+                }
+            }
+        }
+    }
+    .allChargeIndex{
+        .success{
+            background: rgba(0, 128, 0, 0.26);
+            color: #006200;
+            padding: 1rem;
+            border-radius: .3rem;
+            font-size: .85rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        .error{
+            color: red;
+            background: rgba(255, 0, 0, 0.1);
+            padding: 1rem;
+            border-radius: .3rem;
+            font-size: .85rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        .chargePrice{
+            form{
+                .chargeField{
+                    background: white;
+                    border: 1px solid $border1;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    overflow: hidden;
+                    .suggest{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: .5rem;
+                        margin-bottom: 2rem;
+                        .title1{
+                            font-size: .9rem;
+                            font-weight: 700;
+                            color: $text1;
+                        }
+                        .boxes{
+                            display: flex;
+                            justify-content: right;
+                            align-items: center;
+                            gap: .5rem;
+                            .box{
+                                background: #eee;
+                                border-radius: 5rem;
+                                font-size: .9rem;
+                                font-weight: 700;
+                                color: $text1;
+                                padding: .5rem 1rem;
+                                cursor: pointer;
+                                transition: all .3s ease-in-out;
+                                &:hover{
+                                    background: black;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .top{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: .5rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid $border1;
+                        .right1{
+                            font-size: .9rem;
+                            font-weight: 700;
+                            color: $text1;
+                        }
+                        input{
+                            direction: ltr;
+                            text-align: left;
+                            border: 1px solid #000;
+                            padding: 0.3rem .5rem;
+                            color: $text1;
+                            border-radius: 5px;
+                            font-size: 1rem;
+                        }
+                        p{
+                            font-size: .75rem;
+                            font-weight: 300;
+                            color: $text1;
+                        }
+                    }
+                    .finalPrice{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 1rem;
+                        margin-top: 1rem;
+                        .title2{
+                            font-size: 1.1rem;
+                            font-weight: 900;
+                            color: black;
+                        }
+                        .price{
+                            font-size: 1.1rem;
+                            font-weight: 900;
+                            color: black;
+                        }
+                        button{
+                            font-size: 1rem;
+                            font-weight: 700;
+                            color: white;
+                            background: $green;
+                            padding: .5rem 2rem;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .bot{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1rem;
+                    .gateItems{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: .5rem;
+                        margin: 2rem 0;
+                        .gateItem{
+                            display: grid;
+                            justify-content: center;
+                            padding: .5rem;
+                            box-shadow: 0 0 10px rgba(0,0,0,.1);
+                            border-radius: 10px;
+                            background: white;
+                            cursor: pointer;
+                            border: 2px solid white;
+                            filter: grayscale(1);
+                            transition: all .3s ease-in-out;
+                            img{
+                                height: 3.5rem;
+                                width: 3.5rem;
+                                object-fit: contain;
+                            }
+                            &:hover{
+                                filter: grayscale(0);
+                            }
+                        }
+                        .active{
+                            border: 2px solid $green;
+                            filter: grayscale(0);
+                        }
+                    }
+                    button{
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: white;
+                        background: $green;
+                        padding: .5rem 2rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .chargeWidgets{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+            grid-gap: 1rem;
+            .WidgetItem{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                grid-gap: 1rem;
+                padding: 1rem;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                background: white;
+                z-index: 1;
+                border: 1px solid $border1;
+                .WidgetIcon{
+                    position: relative;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+                .WidgetSubject{
+                    position: relative;
+                    z-index: 5;
+                    h4{
+                        font-size: .8rem;
+                        color: $text1;
+                        font-weight: 300;
+                    }
+                    h5{
+                        font-size: .85rem;
+                        color: black;
+                        font-weight: 700;
+                        margin-top: .5rem;
+                        span{
+                            letter-spacing: .2px;
+                        }
+                    }
+                }
+            }
+        }
+        .packs{
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            border-radius: 10px;
+            .title{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: black;
+                margin-bottom: .5rem;
+            }
+            .body{
+                font-size: 1rem;
+                font-weight: 500;
+                color: $text1;
+                margin-bottom: 1rem;
+            }
+            .items{
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+                grid-gap: 1rem;
+                .item{
+                    display: grid;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    border: 1px solid #ddd;
+                    h4{
+                        text-align: center;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: black;
+                        margin-bottom: .5rem;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: .9rem;
+                        font-weight: 300;
+                        color: $text1;
+                        margin-bottom: 1rem;
+                    }
+                    .option{
+                        margin-bottom: 1rem;
+                        font-size: .9rem;
+                        font-weight: 700;
+                        color: black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: .5rem;
+                        span{
+                            &:first-child{
+                                font-weight: 300;
+                                font-size: .8rem;
+                                opacity: .7;
+                            }
+                        }
+                    }
+                    .button{
+                        display: grid;
+                        width: 100%;
+                        background: green;
+                        border-radius: 5px;
+                        padding: .3rem 1rem;
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: white;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        table{
+            margin-top: 1rem;
+            background: white;
+            border-radius: 10px;
+            width: 100%;
+            border: 1px solid $border1;
+            tr{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(1px , 1fr));
+                align-items: center;
+                grid-gap: 1rem;
+                padding: 1rem;
+                th{
+                    font-weight: 700;
+                    color: $text1;
+                    font-size: .85rem;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                }
+                td{
+                    font-weight: 300;
+                    font-size: .85rem;
+                    text-align: center;
+                    color: $text1;
+                    .active{
+                        background: green;
+                        padding: .3rem .5rem;
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: white !important;
+                        border-radius: 5px;
+                    }
+                    .unActive{
+                        background: red;
+                        padding: .3rem .5rem;
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: white !important;
+                        border-radius: 5px;
+                    }
+                }
+                &:nth-child(even){
+                    background: #eeeeee;
+                }
+            }
+        }
+        @media screen and (max-width:1000px) {
+            margin: .5rem;
+            .chargePrice{
+                form{
+                    .chargeField{
+                        border-radius: 5px;
+                        padding: .5rem;
+                        .suggest{
+                            margin-bottom: 1rem;
+                            .title1{
+                                text-align: center;
+                                margin-bottom: .5rem;
+                            }
+                            .boxes{
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                .box{
+                                    font-size: .7rem;
+                                    padding: .5rem;
+                                }
+                            }
+                        }
+                        .top{
+                            padding-bottom: .5rem;
+                            .right1{
+                                font-size: .8rem;
+                            }
+                            input{
+                                font-size: .85rem;
+                            }
+                        }
+                        .finalPrice{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: .5rem;
+                            margin-top: .5rem;
+                            .title2{
+                                font-size: .9rem;
+                            }
+                            .price{
+                                font-size: .9rem;
+                            }
+                            button{
+                                font-size: .8rem;
+                                padding: .5rem 1rem;
+                            }
+                        }
+                    }
+                    .bot{
+                        display: block;
+                        .gateItems{
+                            margin: 1rem 0;
+                            .gateItem{
+                                img{
+                                    height: 3rem;
+                                    width: 3rem;
+                                }
+                            }
+                        }
+                        button{
+                            width: 100%;
+                            padding: .5rem 1rem;
+                        }
+                    }
+                    .top{
+                        .right1{
+                            font-size: .8rem;
+                        }
+                        input{
+                            font-size: .8rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .chargeWidgets{
+                grid-template-columns: 1fr 1fr;
+                grid-gap: .5rem;
+                .WidgetItem{
+                    display: block;
+                    padding: .5rem;
+                    .WidgetIcon{
+                        display: none;
+                    }
+                    .WidgetSubject{
+                        h4{
+                            font-size: .75rem;
+                        }
+                        h5{
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+            .allTables{
+                overflow-x: scroll;
+                table{
+                    clear: both;
+                    margin-top: 6px !important;
+                    margin-bottom: 6px !important;
+                    max-width: none !important;
+                    border-collapse: separate !important;
+                    width: 100%;
+                    tbody{
+                        background: white;
+                    }
+                    tr{
+                        display: flex;
+                        td,th{
+                            min-width: 6rem;
+                        }
+                        .buttons{
+                            min-width: 6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table{
+        background: white;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        .filters{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #bbb;
+            .right{
+                display: flex;
+                justify-content: right;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 1rem;
+                .title1{
+                    font-weight: 700;
+                    color: black;
+                    font-size: 1rem;
+                }
+                select,input{
+                    background: transparent;
+                    border: 1px solid #bbb;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    font-weight: 300;
+                    color: $text1;
+                    font-size: .85rem;
+                }
+                button{
+                    background: green;
+                    padding: .3rem 1rem;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+            }
+            .left{
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    background: $green;
+                    padding: .3rem 1rem;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    i{
+                        display: grid;
+                        align-items: center;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+        table{
+            background: white;
+            border-radius: .3rem;
+            width: 100%;
+            tr{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(1px,1fr));
+                align-items: center;
+                border-top: 1px solid #eee;
+                th{
+                    font-weight: 700;
+                    color: black;
+                    font-size: .85rem;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    height: 100%;
+                    overflow: hidden;
+                    border-left: 1px solid #eee;
+                    padding: .8rem;
+                    &:last-child{
+                        border-left: 0;
+                    }
+                }
+                td{
+                    display: grid;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: .85rem;
+                    text-align: center;
+                    color: $text1;
+                    height: 100%;
+                    border-left: 1px solid #eee;
+                    padding: .8rem;
+                    .unActive{
+                        background: red;
+                        color: white;
+                        padding: .2rem .5rem;
+                        border-radius: 5px;
+                    }
+                    .active{
+                        background: green;
+                        color: white;
+                        padding: .2rem .5rem;
+                        border-radius: 5px;
+                    }
+                    .buttons{
+                        position: relative;
+                        .operate{
+                            font-size: .8rem;
+                            padding: .3rem;
+                            border-radius: 5px;
+                            color: $green;
+                            background: transparent;
+                            border: 1px solid $green;
+                            width: 100%;
+                        }
+                        .items{
+                            position: absolute;
+                            top: calc(100% + 5px);
+                            z-index: 10;
+                            width: 100%;
+                            background: white;
+                            border-radius: 5px;
+                            border: 1px solid $green;
+                            display: none;
+                            grid-template-columns: 1fr;
+                            a{
+                                display: grid;
+                                padding: .5rem;
+                                font-size: .8rem;
+                                font-weight: 300;
+                                color: $green;
+                                text-align: right;
+                                border-top: 1px solid $green;
+                                transition: all .3s ease-in-out;
+                                &:first-child{
+                                    border-top: 0;
+                                }
+                                &:hover{
+                                    background: $green;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    &:last-child{
+                        border-left: 0;
+                    }
+                }
+                &:first-child{
+                    border-top: 0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .allChargeIndex{
+            margin: 0;
+        }
+        .chargeWidgets{
+            grid-template-columns: 1fr 1fr;
+            grid-gap: .5rem;
+            margin-bottom: 1rem;
+            .WidgetItem{
+                grid-gap: .5rem;
+                padding: .5rem;
+                margin-bottom: 0;
+                .WidgetIcon{
+                    svg{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+                .WidgetSubject{
+                    h4{
+                        font-size: .8rem;
+                    }
+                    h5{
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+        .table{
+            .filters{
+                gap: .5rem;
+                padding: .5rem;
+                .right{
+                    gap: .5rem;
+                    .title1{
+                        font-size: .8rem;
+                    }
+                    select,input{
+                        font-size: .7rem;
+                    }
+                    button{
+                        padding: .3rem .5rem;
+                        font-size: .7rem;
+                    }
+                }
+                .left{
+                    a{
+                        padding: .3rem .5rem;
+                        font-size: .7rem;
+                    }
+                }
+            }
+            table{
+                tr{
+                    th{
+                        font-size: .7rem;
+                        padding: .3rem;
+                        font-weight: 300;
+                    }
+                    td{
+                        font-size: .7rem;
+                        padding: .3rem;
+                        font-weight: 300;
+                        .buttons{
+                            position: relative;
+                            .operate{
+                                font-size: .8rem;
+                                padding: .3rem;
+                                border-radius: 5px;
+                                color: $green;
+                                background: transparent;
+                                border: 1px solid $green;
+                                width: 100%;
+                            }
+                            .items{
+                                position: absolute;
+                                top: calc(100% + 5px);
+                                z-index: 10;
+                                width: 100%;
+                                background: white;
+                                border-radius: 5px;
+                                border: 1px solid $green;
+                                display: none;
+                                grid-template-columns: 1fr;
+                                a{
+                                    display: grid;
+                                    padding: .5rem;
+                                    font-size: .8rem;
+                                    font-weight: 300;
+                                    color: $green;
+                                    text-align: right;
+                                    border-top: 1px solid $green;
+                                    transition: all .3s ease-in-out;
+                                    &:first-child{
+                                        border-top: 0;
+                                    }
+                                    &:hover{
+                                        background: $green;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

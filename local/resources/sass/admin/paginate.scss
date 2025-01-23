@@ -1,0 +1,31 @@
+.pagination{
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+    margin: 1rem 0;
+    a{
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 5px;
+        background: white;
+        color: $text1;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 300;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        svg{
+            width: .8rem;
+            height: .8rem;
+            fill: $text1;
+        }
+    }
+    .active-page{
+        background: $green;
+        color: white;
+    }
+}

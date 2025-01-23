@@ -1,0 +1,41 @@
+.allPageIndex{
+    margin: auto;
+    background: $backHome;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    h1{
+        padding-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $green;
+        border-bottom: 4px dashed $border1;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .description{
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: $text1;
+            line-height: 2.25;
+            border-radius: 10px;
+        }
+        .image{
+            display: grid;
+            justify-content: center;
+        }
+    }
+    .pageContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        #map4{
+            z-index: 1;
+        }
+        .mapp-container{
+            height: 20rem !important;
+        }
+    }
+}

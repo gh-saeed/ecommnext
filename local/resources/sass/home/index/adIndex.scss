@@ -1,0 +1,22 @@
+.allAdsIndex{
+    margin: auto;
+    .adsItems{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+        grid-gap: 1rem;
+        .adsItem{
+            border-radius: 10px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .adsItems{
+            grid-template-columns: repeat(auto-fit,minmax(9rem,1fr));
+        }
+    }
+}

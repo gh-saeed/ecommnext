@@ -1,0 +1,544 @@
+.allSellerSingle{
+    margin: 1rem auto;
+    .top{
+        background: white;
+        box-shadow: 0 0 20px rgba(0,0,0,.15);
+        padding: 1rem;
+        padding-bottom: 0;
+        border-radius: 10px;
+        .detail{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            .profile{
+                display: flex;
+                gap: .5rem;
+                align-content: center;
+                .pic{
+                    overflow: hidden;
+                    border-radius: 50%;
+                    img{
+                        width: 4rem;
+                        height: 4rem;
+                        object-fit: cover;
+                    }
+                }
+                .detail2{
+                    display: grid;
+                    align-content: center;
+                    .name{
+                        display: flex;
+                        align-items: center;
+                        justify-content: right;
+                        gap: 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                        color: black;
+                        span{
+                            display: flex;
+                            align-items: center;
+                            justify-content: right;
+                            gap: .3rem;
+                            font-size: .9rem;
+                            font-weight: 500;
+                            color: red;
+                            border: 1px solid red;
+                            border-radius: 30px;
+                            padding: .1rem .5rem;
+                            &:before{
+                                content: "";
+                                width: 6px;
+                                height: 6px;
+                                background: red;
+                                border-radius: 50%;
+                            }
+                        }
+                        .active{
+                            color: green;
+                            border: 1px solid green;
+                            &:before{
+                                background: green;
+                            }
+                        }
+                    }
+                    .city{
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: $text2;
+                    }
+                }
+            }
+            .options{
+                display: flex;
+                justify-content: left;
+                gap: 1rem;
+                align-items: center;
+                .share,.report,.chat,a{
+                    padding: .7rem;
+                    border: 1px solid $green;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    font-size: .85rem;
+                    font-weight: 700;
+                    color: $green;
+                    i{
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            fill: $green;
+                        }
+                    }
+                }
+            }
+        }
+        .more{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 1rem;
+            margin-top: 2rem;
+            .tabs{
+                display: flex;
+                justify-content: right;
+                gap: 1rem;
+                z-index: 10;
+                .tab{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: $text2;
+                    padding: 1rem;
+                    border-bottom: 2px solid white;
+                    cursor: pointer;
+                    .num{
+                        background: $text2;
+                        border-radius: 5px;
+                        color: white;
+                        font-size: .8rem;
+                        min-width: 1.3rem;
+                        height: 1.3rem;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    i{
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            width: 1.6rem;
+                            height: 1.6rem;
+                            fill: $text2;
+                        }
+                    }
+                }
+                .active{
+                    color: $green;
+                    border-bottom: 2px solid $green;
+                    .num{
+                        background: $green;
+                    }
+                    i{
+                        svg{
+                            fill: $green;
+                        }
+                    }
+                }
+            }
+            .options{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 1rem;
+                padding-bottom: 1rem;
+                .option{
+                    padding: .5rem 1rem;
+                    text-align: center;
+                    border: 1px solid #bbb;
+                    border-radius: 5px;
+                    width: 6rem;
+                    .body2{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: black;
+                    }
+                    .title2{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .homes{
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        .about{
+            .title{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $text2;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 300;
+                color: $text2;
+                line-height: 2.5rem;
+                margin-top: 1rem;
+            }
+        }
+        .myCategory{
+            margin-top: 2rem;
+            .title{
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $text2;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+                grid-gap: 1rem;
+                margin-top: 1rem;
+                li{
+                    a{
+                        display: grid;
+                        padding: .5rem;
+                        border-radius: 10px;
+                        background: white;
+                        border: 3px solid $border1;
+                        .pic{
+                            display: grid;
+                            justify-content: center;
+                            img{
+                                width: 100%;
+                                height: 4rem;
+                                object-fit: contain;
+                            }
+                        }
+                        .name{
+                            text-align: center;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            color: $text1;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .comment1{
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+    .allTicket{
+        background: rgba(0,0,0,.5);
+        z-index: 4000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        .chatContent{
+            width: 40%;
+            margin: auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr;
+            border-radius: 5px;
+            overflow: hidden;
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: .5rem;
+                padding: .5rem;
+                background: white;
+                .profile{
+                    display: flex;
+                    justify-content: right;
+                    gap: .5rem;
+                    align-items: center;
+                    .pic{
+                        overflow: hidden;
+                        border-radius: 50%;
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                            object-fit: cover;
+                        }
+                    }
+                    .name{
+                        font-size: 1.2rem;
+                        font-weight: 300;
+                        color: black;
+                    }
+                }
+                .leftHeader{
+                    display: flex;
+                    justify-content: left;
+                    gap: .5rem;
+                }
+                i{
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    svg{
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        fill: $text2;
+                    }
+                }
+            }
+            .body{
+                padding: .5rem;
+                overflow-y: scroll;
+                height: 30rem;
+                p{
+                    display: none;
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text1;
+                    opacity: .7;
+                    .closeChats{
+                        padding: .2rem .4rem;
+                        background: red;
+                        color: white;
+                        border-radius: 5px;
+                        font-size: .7rem;
+                        cursor: pointer;
+                    }
+                }
+                .choice{
+                    display: grid;
+                    padding: .8rem;
+                    border: 1px solid #bbb;
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                    margin-top: .5rem;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        color: $green;
+                        border: 1px solid $green;
+                    }
+                }
+                .login{
+                    display: grid;
+                }
+                .bodyLabel{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: .5rem;
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text1;
+                    margin-top: 1rem;
+                    input,select,textarea{
+                        background: $backHome;
+                        border: 1px solid $border1;
+                        padding: 0.3rem .5rem;
+                        color: $text1;
+                        border-radius: 5px;
+                        font-size: .9rem;
+                        font-weight: 300;
+                        width: 100%;
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                .messages{
+                    padding: .5rem;
+                    border: 2px solid $green;
+                    border-radius: 5px;
+                    margin-top: 1rem;
+                    font-size: .9rem;
+                    font-weight: 300;
+                    background: white;
+                    color: $text1;
+                    opacity: .7;
+                    .time{
+                        text-align: left;
+                        font-size: .7rem;
+                    }
+                }
+                .me{
+                    border: 2px solid #bbb;
+                }
+                .submit{
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: $green;
+                    text-align: center;
+                    background: transparent;
+                    width: 100%;
+                    border: 1px solid $green;
+                    padding: .5rem 1rem;
+                    border-radius: 5px;
+                    margin-top: 1rem;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        background: $green;
+                        color: white;
+                    }
+                }
+                .sendImage{
+                    background: white;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-content: center;
+                    box-shadow: 0 0 10px rgba(0,0,0,.05);
+                    margin-top: 1rem;
+                    .dropify-wrapper{
+                        height: 100px;
+                        border: 1px solid #eee !important;
+                        .file-icon{
+                            &:before{
+                                opacity: 0 !important;
+                                position: absolute !important;
+                                top: 0 !important;
+                                visibility: hidden !important;
+                            }
+                        }
+                        .dropify-message{
+                            position: relative !important;
+                            top: auto !important;
+                            margin-top: 2rem;
+                        }
+                        .dropify-message p{
+                            margin: 0;
+                            font-size: 1rem;
+                            color: #00800082;
+                        }
+                    }
+                }
+            }
+            .send{
+                display: grid;
+                grid-template-columns: 1fr auto;
+                input{
+                    background: white;
+                    border-top: 1px solid $border1;
+                    padding: 1rem;
+                    color: $text1;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    width: 100%;
+                    transition: all .3s ease-in-out;
+                }
+                button{
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: white;
+                    background: $green;
+                    padding: 0 1rem;
+                }
+            }
+            .loginChat{
+                background: red;
+                border-top: 1px solid $border1;
+                padding: .5rem;
+                text-align: center;
+                font-size: .8rem;
+                font-weight: 300;
+                color: white;
+                display: grid;
+                width: 100%;
+            }
+            .typeLogin1{
+                margin-top: 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .top{
+            padding: .5rem;
+            padding-bottom: 0;
+            .detail{
+                display: block;
+                .options{
+                    display: grid;
+                    grid-template-columns: auto auto 1fr;
+                    margin-top: 1rem;
+                    .chat{
+                        text-align: center;
+                    }
+                }
+            }
+            .more{
+                flex-direction: column-reverse;
+                margin-top: 1rem;
+                .tabs{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    grid-gap: 0;
+                    .tab{
+                        font-size: .8rem;
+                        padding: .5rem;
+                        text-align: center;
+                        .num{
+                            font-size: .65rem;
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                    .active{
+                        color: $green;
+                        border-bottom: 2px solid $green;
+                    }
+                }
+                .options{
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    padding-bottom: 0;
+                    grid-gap: .5rem;
+                    width: 100%;
+                    .option{
+                        padding: .5rem;
+                        width: auto;
+                        .body2{
+                            font-size: .8rem;
+                        }
+                        .title2{
+                            font-size: .7rem;
+                        }
+                    }
+                }
+            }
+        }
+        .allTicket{
+            .chatContent{
+                width: 95%;
+                .body{
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}

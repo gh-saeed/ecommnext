@@ -1,0 +1,396 @@
+.allBecomeSeller{
+    margin: auto;
+    margin-top: 1rem;
+    .allBecomeUserInfo{
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        padding: 1rem;
+        margin-top: 1rem;
+        .allBecomeTip{
+            background: rgba(255,0,0,.1);
+            border: 1px solid red;
+            padding: 0 .5rem;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: right;
+            align-items: center;
+            grid-gap: .5rem;
+            height: 3rem;
+            i{
+                svg{
+                    fill: red;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    animation: arrow-anim 1s ease infinite;
+                    margin-bottom: 0;
+                    @keyframes arrow-anim {
+                        0% {
+                            margin-bottom: 0;
+                        }
+                        10% {
+                            margin-bottom: .5rem;
+                        }
+                        30% {
+                            transform: rotate(-40deg);
+                        }
+                        50% {
+                            transform: rotate(40deg);
+                        }
+                        60% {
+                            transform: rotate(-40deg);
+                        }
+                        70% {
+                            transform: rotate(-20deg);
+                        }
+                        80% {
+                            transform: rotate(0);
+                            margin-bottom: 1rem;
+                        }
+                        100% {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+            span{
+                font-size: .85rem;
+                font-weight: 500;
+                color: red;
+                height: 3rem;
+                display: grid;
+                align-items: center;
+            }
+            p{
+                font-size: .85rem;
+                font-weight: 500;
+                color: $text1;
+                height: 3rem;
+                display: grid;
+                align-items: center;
+            }
+        }
+        .sellerType{
+            margin-top: 3rem;
+            h3{
+                font-size: 1rem;
+                font-weight: 700;
+                color: $text1;
+            }
+            select{
+                padding: .8rem 1rem;
+                border: 1.4px solid $border1;
+                border-radius: 10px;
+                width: 100%;
+                background: white;
+                transition: all .3s ease-in-out;
+                font-size: 1rem;
+                font-weight: 300;
+                margin: 1rem 0;
+                &:focus{
+                    border: 1.4px solid $green;
+                }
+            }
+            p{
+                font-size: .75rem;
+                font-weight: 300;
+                color: $text1;
+            }
+        }
+        .personInfoItems{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+            grid-gap: 1rem;
+            margin-top: 1rem;
+            .personInfoItem{
+                h4{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: $text1;
+                    margin-bottom: .5rem;
+                }
+                input,select{
+                    background: white;
+                    padding: .8rem 1rem;
+                    border: 1.4px solid $border1;
+                    border-radius: 10px;
+                    width: 100%;
+                    transition: all .3s ease-in-out;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    &:focus{
+                        border: 1.4px solid $green;
+                    }
+                }
+            }
+        }
+        #city{
+            display: none;
+        }
+        @media screen and (max-width: 700px) {
+            .personInfoItems{
+                grid-template-columns: 1fr;
+            }
+        }
+        .personInfoSeller,.contactSeller{
+            margin-top: 3rem;
+        }
+        h3{
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: black;
+        }
+    }
+    .roles{
+        display: grid;
+        margin-top: 1rem;
+        ul{
+            li{
+                margin-top: 1rem;
+                label{
+                    display: flex;
+                    justify-content: right;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: $text2;
+                    cursor: pointer;
+                    input{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        border-radius: 5rem;
+                    }
+                }
+            }
+        }
+    }
+    .buttons{
+        margin-top: 2rem;
+        button{
+            font-size: 1rem;
+            font-weight: 300;
+            color: white;
+            background: $green;
+            padding: .5rem 3rem;
+            border-radius: 5px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        button[disabled]{
+            opacity: .6;
+        }
+    }
+    .success{
+        background: rgba(0, 255, 0, 0.1);
+        color: green;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        margin: 1rem 0;
+    }
+    .uploadDocument{
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding: 1rem;
+        background: white;
+        margin-top: 1rem;
+        h3{
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $text1;
+        }
+        ul{
+            margin-top: 1rem;
+            li{
+                font-size: .85rem;
+                font-weight: 300;
+                color: $text1;
+                position: relative;
+                margin-bottom: 1rem;
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: right;
+                align-items: center;
+                grid-gap: .3rem;
+                &:before{
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background: $green;
+                    border-radius: 5rem;
+                }
+            }
+        }
+        .sendFileItem{
+            background: white;
+            margin: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0,0,0,.05);
+            .dropify-wrapper{
+                border: 1px solid #eee !important;
+                .file-icon{
+                    &:before{
+                        opacity: 0 !important;
+                        position: absolute !important;
+                        top: 0 !important;
+                        visibility: hidden !important;
+                    }
+                }
+                .dropify-message p{
+                    margin: 0;
+                    font-size: 1.3rem;
+                    color: #00800082;
+                }
+            }
+        }
+    }
+    .checkUploaded{
+        margin-top: 1rem;
+        h3{
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $text1;
+        }
+    }
+    .welcomeSeller{
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        padding: 1rem;
+        margin-top: 1rem;
+        background: white;
+        i{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            svg{
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+        h2,h3{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $text1;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        h3{
+            font-weight: 500;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        p{
+            color: $text1;
+            text-align: center;
+            font-weight: 300;
+            font-size: .85rem;
+            margin-top: 1rem;
+        }
+        .nextButton{
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(10rem , auto));
+            justify-content: center;
+            grid-gap: 1rem;
+            margin-top: 2rem;
+            a{
+                color: $green;
+                text-align: center;
+                font-weight: 300;
+                font-size: .85rem;
+                border-radius: 5px;
+                padding: .5rem 1rem;
+                border:1px solid $green;
+                &:hover{
+                    background: $green;
+                    color: white;
+                }
+            }
+        }
+    }
+    table{
+        background: white;
+        border-radius: .3rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        width: 100%;
+        margin-top: 1rem;
+        tr{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(1px , 1fr));
+            align-items: center;
+            grid-gap: 1rem;
+            padding: 1rem;
+            th{
+                font-weight: 700;
+                color: $text1;
+                font-size: .85rem;
+                text-align: center;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+            td{
+                font-weight: 300;
+                font-size: .85rem;
+                text-align: center;
+                color: $text1;
+                svg{
+                    fill: $text1;
+                    width: 1rem;
+                    height: 1rem;
+                    cursor: pointer;
+                }
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    object-fit: cover;
+                    border-radius: 5rem;
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                }
+                a{
+                    display: grid;
+                    align-items: center;
+                    svg{
+                        margin-left: .5rem;
+                    }
+                }
+            }
+            .buttons{
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: .5rem;
+                a{
+                    font-size: .8rem;
+                    padding: .3rem;
+                    border-radius: 5px;
+                    color: white;
+                    background: green;
+                }
+                button{
+                    font-size: .8rem;
+                    padding: .3rem;
+                    border-radius: 5px;
+                    color: white;
+                    background: orange;
+                    &:last-child{
+                        background: red;
+                    }
+                }
+            }
+            &:nth-child(even){
+                background: #eee;
+            }
+        }
+    }
+}

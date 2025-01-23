@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "sahel";
+    font-style: normal;
+    font-weight: 900;
+    src: url(/fonts/sahel/Sahel-Bold-FD.eot?08b87f17e48f206a20e17ab85354af11);
+    src: url(/fonts/sahel/Sahel-Bold-FD.eot?08b87f17e48f206a20e17ab85354af11?#iefix) format("embedded-opentype"), url(/fonts/sahel/Sahel-Bold-FD.woff?823b5b3701e1192e885dc9cc58fdc177) format("woff"), url(/fonts/sahel/Sahel-Bold-FD.ttf?9cc20b0d50d6c49692f653c622392de0) format("truetype");
+}
+@font-face {
+    font-family: "sahel";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/sahel/Sahel-SemiBold-FD.eot?e8bf431bb6a5a48df131757740379df2);
+    src: url(/fonts/sahel/Sahel-SemiBold-FD.eot?e8bf431bb6a5a48df131757740379df2?#iefix) format("embedded-opentype"), url(/fonts/sahel/Sahel-SemiBold-FD.woff?a465b68f7c1069909584ea67d34c0319) format("woff"), url(/fonts/sahel/Sahel-SemiBold-FD.ttf?3f27847a3a3b282bcee2400a6f6e2c2f) format("truetype");
+}
+@font-face {
+    font-family: "sahel";
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/sahel/Sahel-FD.eot?53303c0ceea321fbdc85b02670fd0556);
+    src: url(/fonts/sahel/Sahel-FD.eot?53303c0ceea321fbdc85b02670fd0556?#iefix) format("embedded-opentype"), url(/fonts/sahel/Sahel-FD.woff?d402f064a654da21814cd7d67686e1d2) format("woff"), url(/fonts/sahel/Sahel-FD.ttf?6a10d7a5fb2bcdd12953b99810c553fe) format("truetype");
+}
+@font-face {
+    font-family: "sahel";
+    font-style: normal;
+    font-weight: 300;
+    src: url(/fonts/sahel/Sahel-Light-FD.eot?7b481604de757aea4f5bf92cf505203f);
+    src: url(/fonts/sahel/Sahel-Light-FD.eot?7b481604de757aea4f5bf92cf505203f?#iefix) format("embedded-opentype"), url(/fonts/sahel/Sahel-Light-FD.woff?e6e3c9b2dbe72f247b3f618a39351453) format("woff"), url(/fonts/sahel/Sahel-Light-FD.ttf?b9497b4bfb9aa38e50fcccca3f7b31a9) format("truetype");
+}
+@font-face {
+    font-family: "sahel";
+    font-style: normal;
+    font-weight: 100;
+    src: url(/fonts/sahel/Sahel-Light-FD.eot?eb450668450513758c4dc760735661b6);
+    src: url(/fonts/sahel/Sahel-Light-FD.eot?eb450668450513758c4dc760735661b6?#iefix) format("embedded-opentype"), url(/fonts/sahel/Sahel-Light-FD.woff?27ce2292a17132cf6de308a1f3f1dfb8) format("woff"), url(/fonts/sahel/Sahel-Light-FD.ttf?50de0009ea5ff2cd18c1de41bb6f5c1d) format("truetype");
+}
+@font-face {
+    font-family: digikala;
+    src: url(/fonts/Digikala.eot?5996485d0d7f0569290bac13374cfabd);
+    src: url(/fonts/Digikala.eot?5996485d0d7f0569290bac13374cfabd?#iefix) format("eot"), url(/fonts/Digikala.woff2?c470bccbd63271da5e65cb1c3e54c319) format("woff2"), url(/fonts/Digikala.woff?6748f7113746d5ea296614e23457d162) format("woff"), url(/fonts/Digikala.ttf?835975a3143c5e80bb193b6d39e572d0) format("truetype");
+}
+html {
+    font-family: 'sahel', sahel, sans-serif;
+}
+input, textarea, select, select option, button{
+    font-family: 'sahel', sahel, sans-serif;
+}
+body {
+    font-family: 'sahel', sahel, sans-serif;
+}

@@ -1,0 +1,92 @@
+.changeExcelIndex{
+    .alert{
+        background: rgba(0, 128, 0, 0.26);
+        color: #006200;
+        padding: 1rem;
+        border-radius: .3rem;
+        font-size: .85rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    .postType{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 1rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        border-radius: 10px;
+        .item{
+            overflow: hidden;
+            cursor: pointer;
+            h4{
+                padding: .6rem 1rem;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $text1;
+                text-align: center;
+                background: white;
+                border-bottom: 2px solid #eee;
+            }
+            .active{
+                border-bottom: 2px solid green;
+            }
+            &:first-child{
+                h4{
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            &:last-child{
+                h4{
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+        }
+    }
+    .changePrices{
+        padding: 1rem;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,.05);
+        display: grid;
+        grid-gap: 2rem;
+        .item{
+            display: grid;
+            grid-template-columns: 10rem 1fr;
+            grid-gap: 1rem;
+            label{
+                color: $text1;
+                font-weight: 500;
+                font-size: .9rem;
+            }
+            input{
+                border: 1.4px solid $border1;
+                padding: .5rem;
+                color: $text1;
+                border-radius: .3rem;
+                font-size: .8rem;
+                transition: all .3s ease-in-out;
+                &:focus{
+                    border:1.4px solid $blue;
+                    box-shadow: 0 3px 8px 0 rgba(0,0,0,.1);
+                }
+            }
+        }
+        button{
+            background: $green;
+            padding: .3rem;
+            font-size: .8rem;
+            font-weight: 300;
+            color: white;
+            border-radius: 5px;
+        }
+        @media screen and (max-width:700px) {
+            .item{
+                display: block;
+                span{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,429 @@
+.momentProduct{
+    display: grid;
+    grid-template-columns: 1fr 17rem;
+    grid-gap: 1rem;
+    margin: auto;
+    .rightMoment{
+        border: 1px solid $border1;
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+        padding: 1rem;
+        .rightMomentTitle{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $text1;
+        }
+        .momentSwiper{
+            margin-top: 1rem;
+            a{
+                display: grid;
+                border: 2px solid $border1;
+                border-radius: 10px;
+                padding: 1rem;
+                .timer{
+                    margin-bottom: 1rem;
+                    border-radius: 5px;
+                    position: relative;
+                    overflow: hidden;
+                    height: 5px;
+                    &:before{
+                        height: 5px;
+                        background: #f5f5f5;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        content: "";
+                        box-sizing: inherit;
+                    }
+                    &:after{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 5px;
+                        background: linear-gradient(90deg, #f5f5f5, $green);
+                        content: "";
+                        transition: all 11s ease-in-out;
+                        box-shadow: 0 0 5px rgba(255,0,0,.1);
+                    }
+                }
+                .momentPic{
+                    transition: all .5s ease-in-out;
+                    img{
+                        width: 100%;
+                        height: 14rem;
+                        object-fit: contain;
+                    }
+                }
+                .title2{
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: $text1;
+                    margin: 1rem 0;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                }
+                .price1{
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    grid-gap: .2rem;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: $text1;
+                    transition: all .3s ease-in-out;
+                    &:after{
+                        content: "\F06C\00FE0E";
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        font-family: digikala;
+                        font-size: 1.1rem;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: 400;
+                        text-decoration: none;
+                        text-transform: none;
+                        line-height: 1;
+                        box-sizing: inherit;
+                    }
+                }
+                .addCart{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    color: $text1;
+                    background: #f5f5f5;
+                    border-radius: 5px;
+                    margin-top: 1rem;
+                    i{
+                        padding: .8rem;
+                        border-radius: 5px;
+                        background: $green;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                            fill: white;
+                        }
+                    }
+                }
+                &:hover{
+                    border: 2px solid $green;
+                    .price1{
+                        color: $green;
+                    }
+                }
+            }
+            .swiper-button-next,.swiper-button-prev{
+                padding: .5rem;
+                background: white;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,.3);
+                &:before,&:after{
+                    font-size: 1.2rem;
+                    color: $green;
+                }
+            }
+        }
+    }
+    .leftMoment{
+        padding: 1rem;
+        border-radius: 10px;
+        background: white;
+        .title1{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+            grid-gap: .5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: $text1;
+            margin-bottom: 1rem;
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+                fill: $text1;
+                animation: timeAnim 2.5s linear infinite;
+                @-webkit-keyframes timeAnim {
+                    0% {
+                        transform: rotate(0deg)
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                @keyframes timeAnim {
+                    0% {
+                        transform: rotate(0deg)
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        .slider-moment2{
+            .owl-carousel.owl-loaded{
+                display: grid !important;
+            }
+            button.owl-prev{
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                opacity: 0;
+                visibility: hidden;
+            }
+            button.owl-next{
+                position: absolute;
+                left: 1rem;
+                top: 0;
+                bottom: 0;
+                opacity: 0;
+                visibility: hidden;
+            }
+            .owl-dots{
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+            }
+            a{
+                .timer{
+                    margin-bottom: 1rem;
+                    border-radius: 5px;
+                    position: relative;
+                    overflow: hidden;
+                    height: 5px;
+                    &:before{
+                        height: 5px;
+                        background: #f5f5f5;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        content: "";
+                        box-sizing: inherit;
+                    }
+                    &:after{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 5px;
+                        background: linear-gradient(90deg, #f5f5f5, $green);
+                        content: "";
+                        transition: all 11s ease-in-out;
+                        box-shadow: 0 0 5px rgba(255,0,0,.1);
+                    }
+                }
+                .momentPic{
+                    transition: all .5s ease-in-out;
+                    img{
+                        width: 100%;
+                        height: 16rem;
+                        object-fit: contain;
+                    }
+                }
+                .title2{
+                    font-size: .9rem;
+                    font-weight: 500;
+                    color: $text1;
+                    margin-top: 1rem;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    height: 3rem;
+                }
+                .price1{
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    grid-gap: .2rem;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: $text1;
+                    &:after{
+                        content: "\F06C\00FE0E";
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        font-family: digikala;
+                        font-size: 1.1rem;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: 400;
+                        text-decoration: none;
+                        text-transform: none;
+                        line-height: 1;
+                        box-sizing: inherit;
+                    }
+                }
+                .addCart{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    color: $text1;
+                    background: #f5f5f5;
+                    border-radius: 5px;
+                    margin-top: 1rem;
+                    i{
+                        padding: .8rem;
+                        border-radius: 5px;
+                        background: $green;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+                            width: 1rem;
+                            height: 1rem;
+                            fill: white;
+                        }
+                    }
+                }
+            }
+            .owl-item.active{
+                .timer{
+                    &:after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .momentProduct{
+        display: block;
+        .rightMoment{
+            padding: .5rem;
+            .rightMomentTitle{
+                font-size: 1rem;
+            }
+            .momentSwiper{
+                margin-top: .5rem;
+                a{
+                    padding: .5rem;
+                    .timer{
+                        margin-bottom: .5rem;
+                    }
+                    .momentPic{
+                        img{
+                            height: 10rem;
+                        }
+                    }
+                    .title2{
+                        font-size: .8rem;
+                        margin: .5rem 0;
+                    }
+                    .price1{
+                        font-size: 1rem;
+                    }
+                    .addCart{
+                        font-size: .75rem;
+                        margin-top: .5rem;
+                        i{
+                            padding: .5rem;
+                        }
+                    }
+                }
+                .swiper-button-next,.swiper-button-prev{
+                    padding: .5rem;
+                    background: white;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0,0,0,.3);
+                    &:before,&:after{
+                        font-size: 1.2rem;
+                        color: $green;
+                    }
+                }
+            }
+        }
+        .leftMoment{
+            padding: .5rem;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            .title1{
+                font-size: 1rem;
+            }
+            .slider-moment2{
+                a{
+                    .timer{
+                        margin-bottom: .5rem;
+                    }
+                    .momentPic{
+                        img{
+                            height: 10rem;
+                        }
+                    }
+                    .title2{
+                        font-size: .75rem;
+                        height: 2rem;
+                    }
+                    .price1{
+                        font-size: 1rem;
+                        &:after{
+                            font-size: .8rem;
+                        }
+                    }
+                    .addCart{
+                        font-size: .75rem;
+                        margin-top: .8rem;
+                        i{
+                            padding: .5rem;
+                        }
+                    }
+                }
+                .owl-item.active{
+                    .timer{
+                        &:after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

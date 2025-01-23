@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/irsans-b.eot);
+    src: url(fonts/irsans-b.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-b.woff) format("woff"), url(fonts/irsans-b.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/irsans-m.eot);
+    src: url(fonts/irsans-m.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-m.woff) format("woff"), url(fonts/irsans-m.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/irsans.eot);
+    src: url(fonts/irsans.eot?#iefix) format("embedded-opentype"), url(fonts/irsans.woff) format("woff"), url(fonts/irsans.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/irsans-l.eot);
+    src: url(fonts/irsans-l.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-l.woff) format("woff"), url(fonts/irsans-l.ttf) format("truetype")
+}
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 100;
+    src: url(fonts/irsans-u.eot);
+    src: url(fonts/irsans-u.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-u.woff) format("woff"), url(fonts/irsans-u.ttf) format("truetype")
+}
+i,
+html {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'irsans', irsans, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+}
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    line-height: normal;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    display: inline-block
+}
+input, textarea, select, select option, button{
+    font-family: 'irsans', irsans, sans-serif;
+    outline-style: none;
+}
+button, input[type='submit']{
+    cursor: pointer;
+}
+input:focus{
+    outline: 0;
+}
+li,
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    outline: 0;
+}
+li{
+    transition:none
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.siteMeta{
+    position: absolute;
+    visibility: hidden;
+}
+body {
+    direction: rtl;
+    font-family: 'irsans', irsans, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    overflow-x: hidden;
+    height: 100%;
+    background: #F0F3F7;
+    .hidden{
+        position: absolute;
+        opacity: 0;
+        top: 0;
+    }
+    .filemanager{
+        display: none;
+    }
+}
+@import "variables";
+@import "admin/header/headerPanel";
+@import "admin/side/sidebar";
+@import "admin/ticket/index";
+@import "admin/change/excel";
+@import "admin/change/index";
+@import "admin/wallet/index";
+@import "admin/panel";
+@import "admin/post/groupAdd";
+@import "admin/post/create";
+@import "admin/pay/index";
+@import "admin/inventory/index";
+@import "admin/pay/showPay";
+@import "admin/setting/settingCategory";
+@import "admin/setting/settingManage";
+@import "admin/post/index";
+@import "admin/taxonamy/index";
+@import "admin/taxonamy/show";
+@import "admin/widget/create";
+@import "admin/widget/index";
+@import "admin/comment/edit";
+@import "admin/gallery/index";
+@import "admin/tank/index";
+@import "admin/ticket/chat";
+@import "admin/event/index";
+@import "admin/filemanager";
+@import "admin/paginate";
+@import "admin/learn";
+@import "admin/excel/excelPanel";
+@import "admin/seller/documentPanel";
